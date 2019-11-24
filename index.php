@@ -38,9 +38,9 @@ try {
     echo "Ma voiture roule comme un donut<br>";
 }
 echo"<br>";
-$kmToMiles = Speedometer::kmToMiles(1);
+$kmToMiles = Speedometer::kmToMiles(10);
 $milesToKm = Speedometer::milesToKm(1);
 
-echo "1 Kilométre correspond à . $kmToMiles . Miles";
+echo "10 Kilométre correspond à . $kmToMiles . Miles";
 echo"<br>";
 echo "1 Miles correspond à . $milesToKm . Kilosmétres";
