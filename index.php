@@ -14,7 +14,25 @@ $bmw = new Car('black',5,'fuel');
 $audi =new Car('green',5,'electric');
 $d1 = new Motorway();
 
-$d1->addVehicle($audi);
-$d1->addVehicle($bmw);
-$d1->addVehicle($btwin);
-var_dump($d1->getCurrentVehicles());
+
+
+$bmw->setparkbreak();
+var_dump($bmw);
+try {
+    echo $bmw->start();
+} catch (Exception $e) {
+    echo $e->getMessage();
+    $bmw->setParkBreak();
+} finally {
+    echo "Ma voiture roule comme un donut";
+}
+$bmw->setParkBreak();
+var_dump($bmw);
+try {
+    echo $bmw->start();
+    } catch (Exception $e) {
+    echo $e->getMessage();
+    $bmw->setParkBreak();
+} finally {
+    echo "Ma voiture roule comme un donut";
+}
