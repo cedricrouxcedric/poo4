@@ -7,6 +7,7 @@ require_once 'Highway.php';
 require_once 'Motorway.php';
 require_once 'Pedestrialway.php';
 require_once 'Residentialway.php';
+require_once 'Speedometer.php';
 
 $btwin = new Bicycle('blue',1);
 
@@ -24,7 +25,7 @@ try {
     echo $e->getMessage();
     $bmw->setParkBreak();
 } finally {
-    echo "Ma voiture roule comme un donut";
+    echo "Ma voiture roule comme un donut<br>";
 }
 $bmw->setParkBreak();
 var_dump($bmw);
@@ -34,5 +35,12 @@ try {
     echo $e->getMessage();
     $bmw->setParkBreak();
 } finally {
-    echo "Ma voiture roule comme un donut";
+    echo "Ma voiture roule comme un donut<br>";
 }
+echo"<br>";
+$kmToMiles = Speedometer::kmToMiles(1);
+$milesToKm = Speedometer::milesToKm(1);
+
+echo "1 Kilométre correspond à . $kmToMiles . Miles";
+echo"<br>";
+echo "1 Miles correspond à . $milesToKm . Kilosmétres";

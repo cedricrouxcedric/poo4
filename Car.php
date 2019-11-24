@@ -106,9 +106,10 @@ class Car extends Vehicle implements LightableInterface
      public function start()
      {    if ($this->getparkbreak())
         {
-            throw new Exception('OULALA j\'ai encore oublié le frein à main');
+            throw new Exception('OULALA j\'ai encore oublié le frein à main<br>');
+
         }
          $this->currentSpeed = 0;
-         return"En voiture Simone";
+         return"En voiture Simone<br>";
      }
 }
